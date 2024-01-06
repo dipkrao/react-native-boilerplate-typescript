@@ -1,81 +1,79 @@
-# react-native-boilerplate-template 2024
-[![npm](https://img.shields.io/npm/v/@handidev/react-native-boilerplate)](https://www.npmjs.com/package/@handidev/react-native-boilerplate)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-## What is React Native Boilerplate 2024
+# Getting Started
 
-It is a template that you can clone and reuse for every project. It is starting point for React Native application.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-## Wanna use React Native TypeScript Boilerplate ? 
+## Step 1: Start the Metro Server
 
-check it out here [React Native TypeScript Boilerplate](https://github.com/handi-dev/react-native-typescript-boilerplate)
+First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
-## React Native Boilerplate ( 0.73.1 )
+To start Metro, run the following command from the _root_ of your React Native project:
 
-consist of:
-  - "react-native": "0.73.1",
-  - "@react-native-masked-view/masked-view": "^0.3.1",
-  - "@react-navigation/bottom-tabs": "^6.5.11",
-  - "@react-navigation/material-top-tabs": "^6.6.5",
-  - "@react-navigation/native": "^6.1.9",
-  - "@react-navigation/native-stack": "^6.9.17",
-  - "@react-navigation/stack": "^6.3.20",
-  - "react": "18.2.0",
-  - "react-native-gesture-handler": "^2.14.0",
-  - "react-native-pager-view": "^6.2.3",
-  - "react-native-safe-area-context": "^4.8.2",
-  - "react-native-screens": "^3.29.0",
-  - "react-native-tab-view": "^3.5.2",
-  - "react-native-vector-icons": "^10.0.3"
-## Requirements
+```bash
+# using npm
+npm start
 
-Node 18 or greater is required. Development for iOS requires a Mac and Xcode 10 or up, and will target iOS 11 and up.
-
-You also need to install the dependencies required by React Native.  
-Go to the [React Native environment setup](https://reactnative.dev/docs/environment-setup), then select `React Native CLI Quickstart` tab.  
-Follow instructions for your given `development OS` and `target OS`.
-
-## QUICK START
-
-To create a new project using the boilerplate simply run :
-
-```
-npx react-native init MyApp --template @handidev/react-native-boilerplate
+# OR using Yarn
+yarn start
 ```
 
-If you want to use typescript version of this React Native Boilerplate, just run this command:
+## Step 2: Start your Application
 
+Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+
+### For Android
+
+```bash
+# using npm
+npm run android
+
+# OR using Yarn
+yarn android
 ```
-npx react-native init MyApp --template @handidev/react-native-typescript-boilerplate
+
+### For iOS
+
+```bash
+# using npm
+npm run ios
+
+# OR using Yarn
+yarn ios
 ```
 
+If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
-note: replace `MyApp` with your desired App name.
+This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-Assuming you have all the requirements installed, you can run the project by running:
+## Step 3: Modifying your App
 
-- `yarn start` / `npm start -- -- reset-cache`  to start the metro bundler, in a dedicated terminal
-- `npx react-native run-ios` / `npx react-native run-android`  to run the *platform* application (remember to start a simulator or connect a device)
-## List of Q & A
+Now that you have successfully run the app, let's modify it.
 
-#### I got error `Error: spawn ./gradlew EACCES` when run `npx react-native run-android`.
+1. Open `App.tsx` in your text editor of choice and edit some lines.
+2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
 
-Run this command `chmod 755 android/gradlew` from your root project directory
+   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
 
-#### I got error `Error: SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable.`
+## Congratulations! :tada:
 
-- Go to your Project -> Android
-- Create a file local.properties
-- Open the file
-- Paste your Android SDK path depending on the operating system:
+You've successfully run and modified your React Native App. :partying_face:
 
-  - Windows:
-    sdk.dir=C:\\Users\\`USERNAME`\\AppData\\Local\\Android\\sdk
-  - Linux or MacOS
-    sdk.dir=/Users/`USERNAME`/Library/Android/sdk
+### Now what?
 
-- Replace `USERNAME` with your PC username
+- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
+- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
 
-### React Native Build Failed on M1 Macbook Pro / Air
+# Troubleshooting
 
-try this solution: [How to Run and Build React Native on Macbook Pro M1 Apple Silicon](https://handi.dev/blog/how-run-react-native-on-macbook-m1-apple-silicon)
+If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+
+# Learn More
+
+To learn more about React Native, take a look at the following resources:
+
+- [React Native Website](https://reactnative.dev) - learn more about React Native.
+- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
+- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
+- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
+- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
